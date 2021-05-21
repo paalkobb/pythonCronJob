@@ -33,7 +33,7 @@ class Executor:
 	def startProgram(self, name):
 		print("Starting program " + name)
 		cmd = self.path + name
-		pid = subprocess.Popen(cmd)
+		pid = subprocess.call(f"start cmd.exe /C cd {self.path}  & {name}", shell=True )
 
 
 
